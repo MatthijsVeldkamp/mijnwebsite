@@ -1,0 +1,162 @@
+/* import poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/arrow-down.css');
+@keyframes welcome
+{
+  0%
+  {
+    filter: blur(5px);
+    transform: translateY(-100px) rotate(3deg);
+    opacity: 0;
+  }
+  100%
+  {
+    filter: blur(0px);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes logo
+{
+  0%
+  {
+    transform: translateZ(0);
+  }
+  100%
+  {
+    transform: translateZ(100px);
+  }
+}
+@keyframes fadein
+{
+  0%
+  {
+    opacity: 0;
+    filter: blur(15px) brightness(0.5);
+    transform: rotate(-10deg);
+  }
+  100%
+  {
+    opacity: 1;
+    filter: blur(0px) brightness(1);
+    transform: rotate(0deg);
+  }
+}
+@keyframes scrolling
+{
+  0%
+  {
+    transform: translateY(0) scaleY(1);
+  }
+  10%
+  {
+    transform: translateY(15px) scaleY(1.05);
+  }
+  20%
+  {
+    transform: translateY(0) scaleY(1);
+  }
+  30%
+  {
+    transform: translateY(15px) scaleY(1.05);
+  }
+  40%
+  {
+    transform: translateY(0px) scaleY(1);
+  }
+  100%
+  {
+    transform: translateY(0) scaleY(1);
+  }
+}
+*
+{
+  background: #00000000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #FFF;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+#scroll
+{
+  opacity: 1;
+  animation: scrolling 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+  animation-delay: 2s;
+}
+.centered {
+  height: 100vh; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container {
+  filter: blur(5px);
+  animation: welcome 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  animation-delay: 1s;
+  opacity: 0;
+  border: 5px solid #FFF;
+  background: #00000000;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  backdrop-filter: blur(15px);
+  margin-top: 5%;
+  z-index: 0;
+}
+.container_no_border {
+  background: #00000000;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 5%;
+  z-index: 1;
+}
+.grid
+{
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr;
+  grid-template-rows: 1fr 500px 4fr;
+  grid-gap: 10px;
+  margin-top: 10px;
+  min-height: 500px;
+  min-width: 500px;
+}
+.container h1
+{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  margin: 0 auto;
+}
+.parallax
+{
+  font-size: 50px;
+  display: flex;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+}
+#logo
+{
+  animation: logo 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards infinite;
+}
