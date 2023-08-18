@@ -17,6 +17,14 @@ ReactDOM.render(<App />, document.getElementById('root'));
 function App() {
   return (
     <div>
+      <div>
+        <BrowserRouter  basename="/React">
+          <Switch>
+            <Route exact path="/"  component={Agenda} />
+            <Route path="/planning" component={Planning} />
+          </Switch>
+        </BrowserRouter>
+      </div>
       <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
         <Parallax pages={5}>
           <ParallaxLayer
